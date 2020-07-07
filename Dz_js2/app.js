@@ -1,20 +1,19 @@
 /*Дз_2_JavaScript*/
 
 function test1() {
-    var text = prompt('Каково \"официальное\" название JavaScript?');
+    let text = prompt('Каково \"официальное\" название JavaScript?');
     if (text == 'ECMAScript') alert('Верно!')
     else alert('Не знаете? \"ECMAScript\"!')
 }
 
 function test2() {
-    var i = + prompt("Введите число");
+    let i = + prompt("Введите число");
     console.log(typeof i)
     if ( i > 0) {
         alert('1');
     }
     else if (i < 0) {
         alert('-1');
-        ;
     }
     else
     {
@@ -41,7 +40,7 @@ function test3() {
 }
 
 function test4() {
-    var i = 0
+    let i = 0
     while(i < 3){
         console.log(i);
         alert('номер ' + i + ' !');
@@ -51,7 +50,7 @@ function test4() {
 
 function test5() {
     do {
-        var text = prompt('Введите число больше 100: ');
+        let text = prompt('Введите число больше 100: ');
         if (text == null) {
             alert('Вход отменен');
             break;
