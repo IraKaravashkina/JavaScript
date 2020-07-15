@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+        src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+        crossorigin="anonymous"></script>
+    <style>
+        #langs p {display: none;}
+        #langs p.first {display: block}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<h3>Выбранный язык</h3>
+<div id="langs">
+    <p class='first'>Java</p>
+    <p>C/C++</p>
+    <p>PHP</p>
+    <p class='last'>JavaScript</p>
+</div>
+<button id="prev">Назад</button>
+<button id="next">Вперед</button>
+<script type="text/javascript">
+    $(function () {
+        var current = $("div#langs p").first();
+        $('#next').click(function () {
+            !$(current).not('.last').hide("fast", function () {
+                current = $(current).next('p');
+                $(current).show("fast");
+            });
+        });
+$('#prev').click(function () {
+    $(current).not('.first').hide("fast", function () {
+        current = $(current).prev('p');
+        $(current).show("fast");
+    });
+});
+    });
+</script>
+</body>
+</html>
