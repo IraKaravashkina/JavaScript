@@ -1,16 +1,10 @@
-var table = new Array(10);
+let array =[1,2,3,4,5,6,7,8,9,10];
 
-for(var i = 0; i < table.lenght; i++) {
-    table[i] = new Array(10);
+for (let x = 0; x < array.length; x++) {
+    let rowData = array[x];
+    let newArray = [];
+for (let y = 0; y < array.length; y++) {
+    newArray.push(array[y] * array[x])
 }
-
-for(var row = 0; row < table.length; row++) {
-    var str = '';
-
-    for(var col = 0; col < table[row].length; col++) {
-        table[row][col] = (row+1)*(col+1);
-        str += table[row][col] + '  ';
-    }
-    console.log(str + '\n');
-    str = '';
+    console.log(newArray);
 }
