@@ -1,0 +1,6 @@
+{
+	"name": "Anton",
+	"isAdmin": false,
+	"age": 28,
+	"company": ["forforce"]
+}
